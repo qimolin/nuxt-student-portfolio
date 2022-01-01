@@ -1,0 +1,22 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "dev",
+			"path": "portfolio/",
+			"problemMatcher": [],
+			"label": "npm: dev - portfolio",
+			"detail": "nuxt"
+		},
+		{
+			"type": "npm",
+			"script": "build",
+			"path": "portfolio/",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: build - portfolio",
+			"detail": "nuxt build"
+		}
+	]
+}
