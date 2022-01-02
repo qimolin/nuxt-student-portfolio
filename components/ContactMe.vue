@@ -1,6 +1,9 @@
 <template>
   <form ref="form" class="w-2/3 sm:w-1/3">
     <h4 class="text-center text-2xl text-gray-100">Contact Me</h4>
+    <p id="status" class="text-center text-xl text-gray-100 hidden">
+      {{ status }}
+    </p>
     <div>
       <input
         v-model="full_name"
@@ -64,10 +67,11 @@
           text-gray-100
           p-3
           rounded-lg
+          hover:opacity-90
           w-full
           focus:outline-none focus:shadow-outline
         "
-        @click.prevent="sendMail"
+        @click.prevent="sendEmail"
       >
         Send Message
       </button>
@@ -76,36 +80,40 @@
 </template>
 
 <script>
+import { send } from '@emailjs/browser'
 export default {
   data() {
     return {
       full_name: '',
       email: '',
       message: '',
+      status: '',
     }
   },
   methods: {
-    async sendMail() {
-      try {
-        const response = await this.$axios.get('/api/contact')
-        console.log(response.data)
-      } catch (err) {
-        console.log(err)
-      }
-      // const startTime = performance.now();
-
-      // await this.$mail.send({
-      //   from: this.full_name,
-      //   subject: `Message from: ${this.full_name} (${this.email})`,
-      //   text: this.message
-      // }).then(() => {
-      //   const endTime = performance.now();
-      //   let timeDiff = endTime - startTime;
-      //   timeDiff /= 1000;
-
-      //   const seconds = Math.round(timeDiff);
-      //   console.log(seconds + "seconds");
-      // });
+    async sendEmail() {
+      const status = document.querySelector('#status')
+      await send(
+        'service_ldrfrkb',
+        'template_vpwpr26',
+        {
+          full_name: this.full_name,
+          email: this.email,
+          message: this.message,
+        },
+        'user_ti3zIGhXXGRRX0mMWNn5u'
+      ).then(
+        () => {
+          this.status = 'message sent succesfully'
+          status.textContent = this.status
+        },
+        () => {
+          this.status = 'something went wrong'
+          status.textContent = this.status
+        }
+      )
+      this.$refs.form.reset()
+      status.className = 'text-center text-xl text-gray-100'
     },
   },
 }

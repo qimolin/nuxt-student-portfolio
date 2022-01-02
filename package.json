@@ -13,6 +13,7 @@
     "lintfix": "prettier --write --list-different . && npm run lint:js -- --fix"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.3.1",
     "aos": "^2.3.4",
     "core-js": "^3.19.3",
     "nodemailer": "^6.7.2",

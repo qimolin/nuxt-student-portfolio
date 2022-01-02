@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="pb-4 px-2 pt-8 sm:px-8 md:px-14 lg:px-22 bg-primary">
-      <!-- <div class="flex justify-center">
+      <div class="flex justify-center">
         <ContactMe id="contact"/>
-      </div> -->
+      </div>
       <div class="flex justify-between items-center">
         <div class="flex justify-center items-center space-x-2">
           <p class="text-md text-gray-100">All rights reserved</p>

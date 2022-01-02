@@ -4,7 +4,7 @@
 		{
 			"type": "npm",
 			"script": "dev",
-			"path": "portfolio/",
+			"path": "/",
 			"problemMatcher": [],
 			"label": "npm: dev - portfolio",
 			"detail": "nuxt"
@@ -12,7 +12,7 @@
 		{
 			"type": "npm",
 			"script": "build",
-			"path": "portfolio/",
+			"path": "/",
 			"group": "build",
 			"problemMatcher": [],
 			"label": "npm: build - portfolio",

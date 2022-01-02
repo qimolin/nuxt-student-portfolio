@@ -65,7 +65,7 @@
                 bg-secondary
                 text-gray-100
                 rounded-2xl
-                hover:opacity-80
+                hover:opacity-90
               "
               onclick="document.getElementById('contact').scrollIntoView();"
             >
