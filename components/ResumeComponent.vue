@@ -141,6 +141,7 @@ export default {
     ],
 
     projects: [
+      { name: 'This website which is built with Nuxt and TailwindCSS' },
       { name: 'Chat app (Vue2 with Quasar)' },
       { name: 'Condominium management app (Angular with material)' },
       { name: 'Airport luggage belt simulation (C# Windows form)' },
