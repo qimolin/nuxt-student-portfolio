@@ -24,10 +24,9 @@
             <section data-aos="fade-right">
               <h2 class="text-xl text-primary mb-2">Objective</h2>
               <p class="mb-4">
-                What I am looking for in an assignment, is a challenging
-                assignment where I can apply my knowledge and gain relevant
-                industrial experience. I also want to improve my technical and
-                soft skills.
+                What I am looking for in a side job, is a flexible working place
+                where I can apply my current knowledge, and continue learning
+                alongside my studies.
               </p>
             </section>
             <section class="mb-4" data-aos="fade-right">
@@ -124,22 +123,25 @@
 export default {
   data: () => ({
     skills: [
-      { name: 'OO Design', circles: 4 },
-      { name: 'C#', circles: 5 },
       { name: 'JavaScript', circles: 5 },
       { name: 'VueJS', circles: 5 },
-      { name: 'SQL', circles: 3 },
+      { name: 'OO Design', circles: 4 },
+      { name: 'C#', circles: 5 },
       { name: 'HTML5', circles: 4 },
       { name: 'CSS3', circles: 3 },
+      { name: 'SQL', circles: 3 },
+      { name: 'NoSQL', circles: 2 },
       { name: 'REST', circles: 4 },
       { name: 'Git', circles: 4 },
       { name: 'Agile & SCRUM', circles: 4 },
       { name: 'Python', circles: 3 },
+      { name: 'PHP', circles: 2 },
+      { name: 'Wordpress', circles: 2 },
       { name: 'C++', circles: 2 },
     ],
 
     projects: [
-      { name: 'Chat app (VueJS with Quasar)' },
+      { name: 'Chat app (Vue2 with Quasar)' },
       { name: 'Condominium management app (Angular with material)' },
       { name: 'Airport luggage belt simulation (C# Windows form)' },
       {
@@ -149,18 +151,28 @@ export default {
 
     work_experiences: [
       {
-        jobRole: 'Software Developer',
+        jobRole: 'Frontend Developer (intern)',
+        companyName: 'Sogeti',
+        startDate: 'February 2022',
+        endDate: 'July 2022',
+        bulletPoints: [
+          'Building cross platform sports challenges app',
+          'Quasar, Vue3, Typescript, Vite and Firebase',
+        ],
+      },
+      {
+        jobRole: 'Full-stack Developer',
         companyName: 'DOEN Horeca uitzendbureau',
         startDate: 'March 2021',
         endDate: 'present',
         bulletPoints: [
           'Built recruitment system from the ground up',
-          'VueJS with Vuetify, ExpressJS with Sequelize, MariaDB, and Docker',
+          'Vue2 with Vuetify, ExpressJS with Sequelize, MariaDB, and Docker',
           'Implementing features, fixing bugs',
         ],
       },
       {
-        jobRole: 'Software Engineer',
+        jobRole: 'Software Engineer (intern)',
         companyName: 'DAF Trucks N.V.',
         startDate: 'September 2020',
         endDate: 'January 2021',
@@ -175,7 +187,7 @@ export default {
         universityName: 'Fontys University of Applied Sciences',
         major: 'BSc in ICT & Software Engineering',
         startDate: 'September 2018',
-        endDate: 'present',
+        endDate: 'July 2022',
         location: 'Eindhoven, The Netherlands',
         bulletPoints: [
           'Taking up specialization courses in cyber security',
@@ -190,7 +202,7 @@ export default {
         location: 'Helsinki, Finland',
         bulletPoints: [
           'Taking up courses in SAP ERP, project management, Internationalization & Globalization, self marketing',
-          'Taking up a project being involved in the IoT part',
+          'Taking up a an IoT project',
         ],
       },
     ],

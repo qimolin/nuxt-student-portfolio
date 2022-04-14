@@ -7,15 +7,7 @@
     <div>
       <input
         v-model="full_name"
-        class="
-          w-full
-          bg-gray-100
-          text-gray-900
-          mt-2
-          p-3
-          rounded-lg
-          focus:outline-none focus:shadow-outline
-        "
+        class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
         type="text"
         placeholder="FULL NAME"
         required
@@ -24,15 +16,7 @@
     <div class="mt-4">
       <input
         v-model="email"
-        class="
-          w-full
-          bg-gray-100
-          text-gray-900
-          mt-2
-          p-3
-          rounded-lg
-          focus:outline-none focus:shadow-outline
-        "
+        class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
         type="text"
         placeholder="EMAIL"
         required
@@ -41,16 +25,7 @@
     <div class="mt-4">
       <textarea
         v-model="message"
-        class="
-          w-full
-          h-32
-          bg-gray-100
-          text-gray-900
-          mt-2
-          p-2
-          rounded-lg
-          focus:outline-none focus:shadow-outline
-        "
+        class="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-2 rounded-lg focus:outline-none focus:shadow-outline"
         type="text"
         placeholder="MESSAGE"
         required
@@ -58,19 +33,7 @@
     </div>
     <div class="my-4">
       <button
-        class="
-          uppercase
-          text-sm
-          font-bold
-          tracking-wide
-          bg-secondary
-          text-gray-100
-          p-3
-          rounded-lg
-          hover:opacity-90
-          w-full
-          focus:outline-none focus:shadow-outline
-        "
+        class="uppercase text-sm font-bold tracking-wide bg-secondary text-gray-100 p-3 rounded-lg hover:opacity-90 w-full focus:outline-none focus:shadow-outline"
         @click.prevent="sendEmail"
       >
         Send Message
@@ -94,14 +57,14 @@ export default {
     async sendEmail() {
       const status = document.querySelector('#status')
       await send(
-        'service_ldrfrkb',
-        'template_vpwpr26',
+        process.env.serviceName,
+        process.env.templateName,
         {
           full_name: this.full_name,
           email: this.email,
           message: this.message,
         },
-        'user_ti3zIGhXXGRRX0mMWNn5u'
+        process.env.userName
       ).then(
         () => {
           this.status = 'message sent succesfully'

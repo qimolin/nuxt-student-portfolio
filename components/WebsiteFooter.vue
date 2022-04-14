@@ -2,7 +2,7 @@
   <div>
     <div class="pb-4 px-2 pt-8 sm:px-8 md:px-14 lg:px-22 bg-primary">
       <div class="flex justify-center">
-        <ContactMe id="contact"/>
+        <ContactMe id="contact" />
       </div>
       <div class="flex justify-between items-center">
         <div class="flex justify-center items-center space-x-2">
@@ -13,7 +13,7 @@
         <div class="space-x-3">
           <a
             class="text-xl text-gray-100"
-            href="https://www.linkedin.com/in/qi-mo-lin/"
+            href="https://www.linkedin.com/in/qi-mo-lin"
           >
             <fa :icon="['fab', 'linkedin']" />
           </a>
@@ -22,7 +22,13 @@
           </a>
           <a
             class="text-xl text-gray-100"
-            href="https://www.instagram.com/qimo.lin/"
+            href="https://stackoverflow.com/users/18646229/qimolin"
+          >
+            <fa :icon="['fab', 'stack-overflow']" />
+          </a>
+          <a
+            class="text-xl text-gray-100"
+            href="https://www.instagram.com/qimo.lin"
           >
             <fa :icon="['fab', 'instagram']" />
           </a>
@@ -31,3 +37,5 @@
     </div>
   </div>
 </template>
+
+<script></script>
