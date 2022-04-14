@@ -1,6 +1,11 @@
 export default {
   target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
+  env: {
+    serviceName: process.env.SERVICE_NAME,
+    templateName: process.env.TEMPLATE_NAME,
+    userName: process.env.USER_NAME,
+  },
   head: {
     title: 'Qi Mo Lin',
     htmlAttrs: {
@@ -44,14 +49,14 @@ export default {
     component: 'fa',
     icons: {
       solid: true,
-      brands: true
-    }
+      brands: true,
+    },
   },
 
   googleFonts: {
     families: {
-      Arimo: true
-    }
+      Arimo: true,
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
