@@ -157,7 +157,7 @@ export default {
         startDate: 'February 2022',
         endDate: 'July 2022',
         bulletPoints: [
-          'Building cross platform sports challenges app',
+          'Building a cross platform sports challenges app',
           'Quasar, Vue3, Typescript, Vite and Firebase',
         ],
       },
