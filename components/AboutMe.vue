@@ -8,10 +8,10 @@
       <section class="text-secondary">Me.</section>
     </h1>
     <p class="flex justify-center text-center w-96 px-4">
-      I am a {{ getCurrentAge() }} graduate student studying ICT & Software
-      Engineering at Fontys University of Applied Sciences and working part-time
-      as a software developer. I really enjoy building apps and learning new
-      things.
+      I am a {{ getCurrentAge() }} year old graduate student studying ICT &
+      Software Engineering at Fontys University of Applied Sciences and working
+      part-time as a software developer. I really enjoy building apps and
+      learning new things.
     </p>
     <a
       class="flex flex-col items-center text-3xl text-secondary mt-6 animate-bounce cursor-pointer"
