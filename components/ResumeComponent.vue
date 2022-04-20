@@ -141,7 +141,7 @@ export default {
     ],
 
     projects: [
-      { name: 'This website which is built with Nuxt and TailwindCSS' },
+      { name: 'This website (Nuxt and TailwindCSS)' },
       { name: 'Chat app (Vue2 with Quasar)' },
       { name: 'Condominium management app (Angular with material)' },
       { name: 'Airport luggage belt simulation (C# Windows form)' },
@@ -158,7 +158,7 @@ export default {
         endDate: 'July 2022',
         bulletPoints: [
           'Building a cross platform sports challenges app',
-          'Quasar, Vue3, Typescript, Vite and Firebase',
+          'Quasar, Vue3, Pinia, Typescript, Vite, Gitlab CI with dockerized runner, and Firebase',
         ],
       },
       {
