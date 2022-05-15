@@ -13,8 +13,13 @@
     </div>
     <div>
       <div class="flex flex-col items-center transform -translate-y-28">
-        <h1 class="text-2xl" data-aos="zoom-in">Qi Mo Lin</h1>
-        <p class="text-xl text-primary" data-aos="zoom-in">
+        <h1 class="text-2xl uppercase tracking-widest" data-aos="zoom-in">
+          Qi Mo Lin
+        </h1>
+        <p
+          class="text-xl text-primary uppercase tracking-widest"
+          data-aos="zoom-in"
+        >
           Software Developer
         </p>
       </div>
@@ -22,20 +27,26 @@
         <div class="flex w-full justify-center">
           <div class="flex flex-col w-4/5 sm:w-2/5">
             <section data-aos="fade-right">
-              <h2 class="text-xl text-primary mb-2">Objective</h2>
+              <h2 class="text-xl text-primary mb-2">Summary</h2>
               <p class="mb-4">
-                What I am looking for in a side job, is a flexible working place
-                where I can apply my current knowledge, and continue learning
-                alongside my studies.
+                I am a graduate student studying ICT & Software engineering. I
+                am very passionate about technology and keeping up with the
+                latest trends. I am going to pursue my MSc degree in Computer
+                Science and want to work next to that.
               </p>
             </section>
             <section class="mb-4" data-aos="fade-right">
-              <h2 class="text-xl text-primary mb-2">Skills</h2>
-              <SkillsComponent
-                v-for="skill in skills"
-                :key="skill.name"
-                :name="skill.name"
-                :circles="skill.circles"
+              <h2 class="text-xl text-primary mb-2">Work experience</h2>
+              <WorkExperience
+                v-for="work_experience in work_experiences"
+                :key="work_experience.companyName"
+                class="mb-2"
+                data-aos="fade-left"
+                :job-role="work_experience.jobRole"
+                :company-name="work_experience.companyName"
+                :start-date="work_experience.startDate"
+                :end-date="work_experience.endDate"
+                :bullet-points="work_experience.bulletPoints"
               />
             </section>
             <section class="mb-4" data-aos="fade-right">
@@ -50,42 +61,12 @@
                 </li>
               </ul>
             </section>
-            <section class="mb-4" data-aos="fade-right">
-              <h2 class="text-xl text-primary mb-2">Languages</h2>
-              <ul>
-                <li
-                  v-for="language in languages"
-                  :key="language"
-                  class="list-disc"
-                >
-                  {{ language }}
-                </li>
-              </ul>
-            </section>
           </div>
         </div>
         <div class="flex w-full justify-center">
           <div class="flex flex-col w-4/5 sm:w-2/5">
-            <section class="mb-4">
-              <h2 class="text-xl text-primary mb-2" data-aos="fade-left">
-                Work experience
-              </h2>
-              <WorkExperience
-                v-for="work_experience in work_experiences"
-                :key="work_experience.companyName"
-                class="mb-2"
-                data-aos="fade-left"
-                :job-role="work_experience.jobRole"
-                :company-name="work_experience.companyName"
-                :start-date="work_experience.startDate"
-                :end-date="work_experience.endDate"
-                :bullet-points="work_experience.bulletPoints"
-              />
-            </section>
-            <section>
-              <h2 class="text-xl text-primary mb-2" data-aos="fade-left">
-                Education
-              </h2>
+            <section class="mb-4" data-aos="fade-left">
+              <h2 class="text-xl text-primary mb-2">Education</h2>
               <EducationComponent
                 v-for="education in educations"
                 :key="education.universityName"
@@ -98,6 +79,27 @@
                 :end-date="education.endDate"
                 :bullet-points="education.bulletPoints"
               />
+            </section>
+            <section data-aos="fade-left">
+              <h2 class="text-xl text-primary mb-4">Skills</h2>
+              <SkillsComponent
+                v-for="skill in skills"
+                :key="skill.name"
+                :name="skill.name"
+                :circles="skill.circles"
+              />
+            </section>
+            <section class="mb-4" data-aos="fade-left">
+              <h2 class="text-xl text-primary mb-2">Languages</h2>
+              <ul>
+                <li
+                  v-for="language in languages"
+                  :key="language"
+                  class="list-disc"
+                >
+                  {{ language }}
+                </li>
+              </ul>
             </section>
           </div>
         </div>
@@ -157,8 +159,8 @@ export default {
         startDate: 'February 2022',
         endDate: 'July 2022',
         bulletPoints: [
-          'Building a cross platform sports challenges app',
-          'Quasar, Vue3, Pinia, Typescript, Vite, Gitlab CI with dockerized runner, and Firebase',
+          'Building a cross-platform sports challenges app',
+          'Quasar, Vue3, Pinia, Typescript, Vite, Gitlab CI with a dockerized runner, and Firebase',
         ],
       },
       {
@@ -179,6 +181,7 @@ export default {
         endDate: 'January 2021',
         bulletPoints: [
           'Researched how to display Simulink models in Bitbucket',
+          'Achieved grade: 9/10',
         ],
       },
     ],
@@ -203,18 +206,12 @@ export default {
         location: 'Helsinki, Finland',
         bulletPoints: [
           'Taking up courses in SAP ERP, project management, Internationalization & Globalization, self marketing',
-          'Taking up a an IoT project',
+          'Taking up an IoT project',
         ],
       },
     ],
 
-    languages: [
-      'Dutch (mother tongue, C2)',
-      'English (fluent, C2)',
-      'Mandarin (listening)',
-      'French (listening)',
-      'German (listening)',
-    ],
+    languages: ['Dutch (mother tongue, C2)', 'English (fluent, C2)'],
   }),
 }
 </script>
