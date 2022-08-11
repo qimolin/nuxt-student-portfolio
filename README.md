@@ -1,3 +1,8 @@
+# Site hosted using Github pages
+**This website is not up-to-date**
+
+https://qimolin.github.io/nuxt-student-portfolio/
+
 # Build Setup
 
 ```bash
