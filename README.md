@@ -1,8 +1,4 @@
-# portfolio
-
-Visit the live website at https://qimolin.com
-
-## Build Setup
+# Build Setup
 
 ```bash
 # install dependencies
